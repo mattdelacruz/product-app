@@ -1,0 +1,9 @@
+<div class="product-list">
+    <h2> Available Products </h2>
+    <div *ngFor="let product of products; let i = index">
+        <app-product-card 
+            [product] = "product"
+            (click)="viewProduct(i)">
+        </app-product-card>
+    </div>
+</div>
