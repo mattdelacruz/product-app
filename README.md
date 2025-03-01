@@ -1,12 +1,28 @@
 # ProductApp
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+## Instructions to run the application
 
-## Development server
+First, clone the repository into your machine
 
-To start a local development server, run:
+```
+git clone https://github.com/mattdelacruz/product-app.git
+```
 
-```bash
+Change directory into the folder you saved the application in
+
+```
+cd product-app
+```
+
+Install necessary libraries
+
+```
+npm install
+```
+
+Start the local development server
+
+```
 ng serve
 ```
 
