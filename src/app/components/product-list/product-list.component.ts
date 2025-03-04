@@ -12,16 +12,18 @@ import { Router } from '@angular/router';
   styleUrl: './product-list.component.css',
 })
 export class ProductListComponent implements OnInit {
-  products: Product[] = [];
+  products: Product[] = []; // an array of product objects that can be iterated through to display all products
 
   constructor(private productService: ProductService, private router: Router) {}
 
   ngOnInit(): void {
+    // Fetches the list of products from the product service when the component initializes and subscribes to the observable to get the data
     this.productService.getProducts().subscribe((data) => {
       this.products = data;
     });
   }
   viewProduct(id: number): void {
+    // routing functionality
     this.router.navigate(['/products', id]);
   }
 }

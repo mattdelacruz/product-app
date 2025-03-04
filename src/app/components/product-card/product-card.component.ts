@@ -7,7 +7,7 @@ import { Product } from '../../models/product.models';
   styleUrl: './product-card.component.css',
 })
 export class ProductCardComponent {
-  @Input() product!: Product;
+  @Input() product!: Product; // product should be an object to ensure type safety and modularity
   @Output() addToCart = new EventEmitter<Product>();
 
   onAddToCart() {

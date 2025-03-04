@@ -19,8 +19,10 @@ export class ProductDetailComponent {
   ) {}
 
   ngOnInit(): void {
+    // Subscribes to route parameter changes to get the 'id' from the URL.
     this.route.paramMap.subscribe((params) => {
       const productId = Number(params.get('id'));
+      // Calls the product service to fetch the product by ID and assigns it to the 'product' property.
       this.productService.getProductById(productId).subscribe((product) => {
         this.product = product;
       });
